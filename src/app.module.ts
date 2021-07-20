@@ -1,18 +1,7 @@
-import { Module } from "@nestjs/common";
-import { UserController } from "./user/user.controller";
-import { BullModule } from "@nestjs/bull";
+import { Module } from '@nestjs/common';
+import imports from './config/imports';
+import controllers from './config/controllers';
+import providers from './config/providers';
 
-@Module({
-  imports: [
-    BullModule.forRoot({
-      redis: {
-        host: "localhost",
-        port: 6379
-      }
-    })
-  ],
-  controllers: [UserController],
-  providers: []
-})
-export class AppModule {
-}
+@Module({ imports, controllers, providers })
+export class AppModule {}
