@@ -1,6 +1,6 @@
 import { ConfigModule } from '@nestjs/config';
 import { BullModule } from '@nestjs/bull';
-import { bullOptions, mailerOptions, queueName } from '../index';
+import { bullOptions, mailerOptions, queueName } from '../config';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { Type } from '@nestjs/common/interfaces/type.interface';
 import { DynamicModule } from '@nestjs/common/interfaces/modules/dynamic-module.interface';

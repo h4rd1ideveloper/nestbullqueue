@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
-import imports from './config/imports';
-import controllers from './config/controllers';
-import providers from './config/providers';
+import { Module } from "@nestjs/common";
+import imports from "./modules/imports";
+import controllers from "./modules/controllers";
+import providers from "./modules/providers";
 
 @Module({ imports, controllers, providers })
-export class AppModule {}
+export class AppModule {
+}
